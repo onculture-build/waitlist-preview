@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Waitlist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .waitlist-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .waitlist-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .waitlist-header h1 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .waitlist-pagination {
+      display: flex;
+      align-items: center;
+    }
+    .waitlist-pagination button {
+      font-size: 16px;
+      padding: 8px;
+      margin: 0 5px;
+      border: none;
+      border-radius: 4px;
+      background-color: #ddd;
+      cursor: pointer;
+    }
+    .waitlist-pagination button:hover {
+      background-color: #bbb;
+    }
+    .waitlist-pagination button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    .waitlist-pagination span {
+      margin: 0 5px;
+      font-size: 16px;
+    }
+    .waitlist-user {
+      padding: 10px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+    .waitlist-user-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 0 0 5px 0;
+    }
+    .waitlist-user-email {
+      font-size: 16px;
+      margin: 0;
+    }
+    .waitlist-user-date {
+      font-size: 16px;
+      margin: 0;
+      margin-right: 10px;
+    }
+    .waitlist-header2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-top: 10px;
+        gap: 20px;
+        /* position: absolute; */
+    }
+    .waitlist-user-div{
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="waitlist-container">
+    <div class="waitlist-header">
+      <h1>Onculture Waitlist</h1>
+      
+      <div class="waitlist-pagination">
+        <button id="prev-button" >&lt; Prev</button>
+        <span>Page <span id="current-page"></span></span>
+        <button id="next-button">Next &gt;</button>
+      </div>
+    </div>
+    <div id="waitlist-count">
+        
+
+    </div>
+    <div class="waitlist-header2">
+        <h3>User Details</h3>
+        <h3>Created Date</h3>
+      </div>
+    <div id="waitlist"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
